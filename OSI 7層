@@ -1,0 +1,53 @@
+App
+為應用軟體而設計的介面，以設定與另一應用軟體之間的通訊 http、https、FTP、Telnet、SSH、SMTP、POP3
+Presentation
+把數據轉換為能與接收者的系統格式相容並適合傳輸的格式。
+Session
+數據傳輸中設定和維護電腦網路中兩台電腦之間的通訊連接
+Transport
+把傳輸表頭（TH）加至數據以形成數據包。傳輸表頭包含了所使用的協定等傳送資訊 TCP,UDP
+Network
+決定數據的路徑選擇和轉寄，將網路表頭（NH）加至數據包，以形成封包。網路表頭包含了網路資料 IP icmp
+Dta-Link
+網路尋址、錯誤偵測和改錯 MAC
+Physical
+管理電腦通訊裝置和網路媒體之間的互通
+
+##TCP/IP##
+App
+Transport
+Intemetwork
+      DataLink
+      Physical
+
+## http ##
+全名HyperText Transfer Protocol
+用於分佈式、協作式和超媒體訊息系統的應用層協定
+全球資訊網的數據通信的基礎
+作用於應用層
+## https ##
+全名HyperText Transfer Protocol Secure
+HTTPS經由HTTP進行通訊
+利用SSL/TLS來加密封包
+http的安全版
+作用於應用層
+## FTP ##
+全名File Transfer Protocol
+
+
+## TCP,UDP ##
+
+TCP 可靠
+
+(1)錯誤重傳
+(2)three-way handshake
+   1.客戶端（通過執行connect函式）向伺服器端傳送一個SYN包，請求一個主動打開。該包攜帶客戶端為這個連接請求而設定的亂數A作為訊息序列號。
+   2.伺服器端收到一個合法的SYN包後，把該包放入SYN佇列中；回送一個SYN/ACK。ACK的確認碼應為A+1，SYN/ACK包本身攜帶一個隨機產生的序號B。
+   3.客戶端收到SYN/ACK包後，傳送一個ACK包，該包的序號被設定為A+1，而ACK的確認碼則為B+1。
+   然後客戶端的connect函式成功返回。當伺服器端收到這個ACK包的時候，把請求影格從SYN佇列中移出，放至ACCEPT佇列中；
+   這時accept函式如果處於阻塞狀態，可以被喚醒，從ACCEPT佇列中取出ACK包，重新建立一個新的用於雙向通信的sockfd，並返回。
+UDP不可靠
+
+
+
+
