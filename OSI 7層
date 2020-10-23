@@ -27,12 +27,32 @@ Intemetwork
 作用於應用層
 ## https ##
 全名HyperText Transfer Protocol Secure
+一種透過計算機網路進行安全通訊的傳輸協定
 HTTPS經由HTTP進行通訊
 利用SSL/TLS來加密封包
 http的安全版
 作用於應用層
 ## FTP ##
 全名File Transfer Protocol
+用於在電腦網路上在客戶端和伺服器之間進行檔案傳輸的應用層協定
+作用於應用層
+##POP3##
+全名Post Office Protocol - Version 3
+用於支援使用客戶端遠端管理在伺服器上的電子郵件
+支援離線郵件處理
+作用於應用層
+##SMTP##
+全名Simple Mail Transfer Protocol
+在網際網路上傳輸電子郵件的標準
+SMTP是一個「推播「協定，它不允許根據需要從遠端伺服器上「拉取」訊息。要拉取訊息到客戶端，郵件客戶端必須使用POP3或IMAP。另一個SMTP伺服器可以使用ETRN在SMTP上觸發一個傳送。
+作用於應用層
+##Telnet##
+使用於網際網路及區域網中，使用虛擬終端機的形式，提供雙向、以文字字串為主的命令列介面互動功能
+常用於伺服器的遠端控制，可供使用者在本地主機執行遠端主機上的工作
+##SSH##
+全名Secure Shell
+
+
 
 
 ## TCP,UDP ##
